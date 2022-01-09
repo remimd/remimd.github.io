@@ -1,0 +1,6 @@
+:root {
+    --white: rgb(225, 225, 225);
+    --background: rgba(25, 25, 25, 0.25);
+    --font: rgb(15, 15, 15);
+    --hover: rgba(65, 65, 65);
+}
