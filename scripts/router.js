@@ -13,9 +13,11 @@ export async function router() {
     if (route_reference) route = routes[route_reference]
     else route = routes["home"]
 
-    if (!route) route = routes["404"]
+    let file = route["file"]
+    if (!route || !file) route = routes["404"]
 
     let title = route["title"]
     if (title) document.title = title
-    return route["file"]
+
+    return file
 }
