@@ -5,6 +5,7 @@
 @import "layout/footer.css";
 @import "pages/home.css";
 @import "pages/install.css";
+@import "pages/404.css";
 
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;

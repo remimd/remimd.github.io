@@ -11,10 +11,11 @@ export async function router() {
 
     let route
     if (route_reference) route = routes[route_reference]
-    else route = Object.values(routes)[0]
+    else route = routes["home"]
+
+    if (!route) route = routes["404"]
 
     let title = route["title"]
     if (title) document.title = title
-
     return route["file"]
 }
