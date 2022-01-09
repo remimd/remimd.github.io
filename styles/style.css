@@ -1,0 +1,38 @@
+@import "default/clear.css";
+@import "default/colors.css";
+@import "layout/header.css";
+@import "layout/main.css";
+@import "layout/footer.css";
+@import "pages/home.css";
+@import "pages/install.css";
+
+a {
+    color: var(--font);
+}
+
+a:hover {
+    transition: color 250ms;
+    color: var(--hover);
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: var(--background);
+    color: var(--font);
+}
+
+div#content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 100vh;
+}
+
+header, main, footer {
+    width: 100%;
+}
+
+main {
+    padding: 25px;
+}

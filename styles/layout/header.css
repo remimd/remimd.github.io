@@ -1,0 +1,30 @@
+header {
+    background-color: var(--background);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+header nav a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 4rem;
+    font-size: 1.5rem;
+    border-bottom: solid var(--background) 2px;
+}
+
+header nav a:hover {
+    transition: border-bottom-color 200ms;
+    border-bottom-color: var(--hover);
+}
