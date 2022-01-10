@@ -1,7 +1,8 @@
 header {
     position: fixed;
     top: 0;
-    background-color: var(--background);
+    background-color: var(--background-opacity);
+    border-bottom: solid var(--font) var(--border);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
 }

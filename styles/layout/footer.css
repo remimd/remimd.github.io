@@ -10,7 +10,7 @@ footer {
 footer div.line {
     background-color: var(--font);
     width: 75%;
-    height: 2px;
+    height: var(--border);
     border-radius: 25px;
 }
 
