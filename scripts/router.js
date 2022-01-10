@@ -17,7 +17,7 @@ export async function router() {
     if (!route || !file) route = routes["404"]
 
     let title = route["title"]
-    if (title) document.title = title
+    if (title) document.title = title + " | " + document.title
 
     return file
 }

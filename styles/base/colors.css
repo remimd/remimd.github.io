@@ -2,5 +2,5 @@
     --background: rgb(225, 225, 225);
     --background-opacity: rgba(var(--background), 0.25);
     --font: rgb(25, 25, 25);
-    --hover: rgb(100, 100, 100);
+    --secondary: #536DFE;
 }

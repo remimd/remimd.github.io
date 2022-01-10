@@ -1,3 +1,26 @@
 div#home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
 
+div#home div.presentation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+    width: 100%;
+}
+
+div#home div.presentation > p {
+    width: 60%;
+    padding: var(--padding-text);
+    border-radius: 0 var(--padding-text) var(--padding-text) 0;
+}
+
+div#home div.presentation > img {
+    width: 25%;
+    padding: var(--padding-text);
 }
