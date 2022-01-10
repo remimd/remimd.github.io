@@ -1,6 +1,9 @@
 :root {
     --background: rgb(225, 225, 225);
-    --background-opacity: rgba(var(--background), 0.25);
+    --background-opacity: rgba(225, 225, 225, 0.25);
     --font: rgb(25, 25, 25);
-    --secondary: #536DFE;
+    --font-opacity: rgba(25, 25, 25, 0.25);
+    --secondary: rgb(83, 109, 254);
+    --secondary-opacity: rgba(83, 109, 254, 0.25);
+    --shadow: rgba(0, 0, 0, 0.25)
 }
