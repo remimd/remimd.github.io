@@ -53,7 +53,7 @@ div#home div.advantages > div {
     border-radius: var(--padding-text);
     backdrop-filter: blur(var(--blur));
     box-shadow: 0 1rem 1rem var(--shadow);
-    z-index: -1;
+    z-index: 1;
 }
 
 div#home div.advantages > div h3 {

@@ -4,6 +4,7 @@ header {
     background-color: var(--background-opacity);
     border-bottom: solid var(--font) var(--border);
     backdrop-filter: blur(var(--blur));
+    z-index: 2;
 }
 
 header nav {
