@@ -1,0 +1,14 @@
+{
+  "home": {
+    "title": "Accueil",
+    "file": "pages/home.html"
+  },
+  "install": {
+    "title": "Installation",
+    "file": "pages/install.html"
+  },
+  "404": {
+    "title": "404: Not Found",
+    "file": "pages/404.html"
+  }
+}

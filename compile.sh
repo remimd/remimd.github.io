@@ -1,0 +1,1 @@
+dart compile js ./dart_application/bin/main.dart -o ./pages/dart/dart_application.js

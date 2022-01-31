@@ -1,0 +1,112 @@
+div#home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+div#home div.presentation {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    width: 100%;
+}
+
+div#home div.presentation > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 750px;
+    min-width: 65%;
+    max-width: 80%;
+    padding: var(--padding-text);
+    border-radius: 0 var(--padding-text) var(--padding-text) 0;
+    box-shadow: 1rem 1rem 1rem var(--shadow);
+    margin-bottom: 2rem;
+}
+
+div#home div.presentation > div > ul {
+    margin-left: calc(var(--padding-text) + 0.25rem);
+}
+
+div#home div.presentation > svg {
+    width: 250px;
+    min-width: 25%;
+    max-height: 80%;
+    margin: 0 auto;
+    padding: var(--padding-text);
+}
+
+div#home div.advantages {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+div#home div.advantages > div {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space);
+    width: 500px;
+    min-width: 30%;
+    max-width: 90%;
+    margin: 0 25px 2rem;
+    padding: var(--padding-text);
+    border: solid var(--secondary-opacity) var(--border);
+    border-radius: var(--padding-text);
+    backdrop-filter: blur(var(--blur));
+    box-shadow: 0 1rem 1rem var(--shadow);
+    z-index: 1;
+}
+
+div#home div.advantages > div h3 {
+    text-align: center;
+}
+
+div#home div.advantages > div ul {
+    list-style-type: "\122B3\0020";
+    margin-left: var(--padding-text);
+}
+
+div#home div.syntax {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 1000px;
+    min-width: 50%;
+    max-width: calc(90% - 2 * var(--padding-text));
+    padding: var(--padding-text);
+    border: solid var(--secondary-opacity) var(--border);
+    border-radius: var(--padding-text);
+    backdrop-filter: blur(var(--blur));
+    box-shadow: 0 1rem 1rem var(--shadow);
+    margin-bottom: 2rem;
+    z-index: 1;
+}
+
+div#home div.syntax p,
+div#home div.syntax h4 {
+    width: 90%;
+}
+
+div#home div.syntax code + h3,
+div#home div.syntax p + h3 {
+    margin-top: 2rem;
+}
+
+div#home div.syntax code + h4,
+div#home div.syntax p + h4 {
+    margin-top: 1rem;
+}
+
+div#home div.syntax code + a,
+div#home div.syntax p + a {
+    margin-top: 1rem;
+}
