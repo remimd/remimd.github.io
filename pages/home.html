@@ -1,10 +1,10 @@
 <div id="home">
-    <h1>Accueil</h1>
+    <h1>Dart</h1>
     <h2 class="subtitle">Présentation</h2>
     <div class="presentation">
         <div class="negative">
             <p>
-                Dart est un language de programmation créé en 2010 par Google et
+                Dart est un langage de programmation créé en 2010 par Google et
                 est en constante évolution. Dart a reçu un accueil mitigé et l'initiative
                 Dart a été critiquée par certains pour avoir fragmenté le web, en raison
                 des plans originaux d'inclure une VM Dart dans Chrome. Ces plans ont été
@@ -12,9 +12,14 @@
                 sur sa compilation en JavaScript.
             </p>
             <p>
-                Pour le moment il existe un Framework en Dart : Flutter permettant de
-                développer des applications pour Android, iOS, Linux, Mac, Windows et
-                de web à partir d'une seule base de code.
+                Dart était un langage peu connu, il était initialement utilisé en interne
+                chez Google pour leurs applications Web. Il a gagné en popularité quand
+                le Framework Flutter est sortie, car c'est une bonne alternative au
+                React Native pour le développement d'application mobile.
+            </p>
+            <p>
+                Le Framework Flutter permet de développer des applications pour Android,
+                iOS, Linux, Mac, Windows et de web à partir d'une seule base de code.
             </p>
             <h3>Dart est utilisé pour réaliser :</h3>
             <ul>
@@ -198,27 +203,119 @@
         <div>
             <h3>Avantages</h3>
             <ul>
-                <li>item1</li>
-                <li>item2</li>
-                <li>item3</li>
-                <li>item4</li>
-                <li>item5</li>
+                <li>Fiable (développé par Google)</li>
+                <li>Open Source</li>
+                <li>Plus rapide dans la majorité des cas (x2)</li>
+                <li>Typage fort</li>
+                <li>Syntaxe agréable</li>
+                <li>Flutter</li>
             </ul>
         </div>
         <div>
             <h3>Inconvénients</h3>
             <ul>
-                <li>item1</li>
-                <li>item2</li>
-                <li>item3</li>
-                <li>item4</li>
-                <li>item5</li>
+                <li>Peu de documentations</li>
+                <li>Peu de ressources disponibles</li>
+                <li>Doit être compilé</li>
             </ul>
         </div>
     </div>
     <h2 class="subtitle">La Syntaxe</h2>
     <div class="syntax">
-        <h3>Hello world!</h3>
-        <a target="_blank" href="/pages/dart" class="button">Hello world!</a>
+        <h3>Déclarer un champ</h3>
+        <h4>Les constantes</h4>
+        <code>
+            const constante = "Constante";<br/>
+            // ou<br/>
+            const String constante = "Constante";
+        </code>
+        <h4>Les variables</h4>
+        <code>
+            var variable = "Variable";<br/>
+            // ou<br/>
+            String variable = "Variable";<br/>
+        </code>
+        <h3>Particularité sur les types</h3>
+        <p>Il est possible d'ajouter un <b>?</b> après le type pour préciser qu'il peut être null</p>
+        <code>
+            double? variable;
+        </code>
+        <p>Ce que cela implique</p>
+        <code>
+            int? arrondiSuperieur = variable?.ceil();
+        </code>
+        <p>
+            Pour éviter de faire une vérification avec une condition, il est possible d'utiliser le <b>?</b>
+            avant l'appel de la fonction
+        </p>
+        <h3>Les Classes</h3>
+        <h4>Définir une classe</h4>
+        <code>
+            class User {<br/>
+            &nbsp;&nbsp;// ...<br/>
+            }
+        </code>
+        <h4>Les Champs</h4>
+        <p>La visibilité d'un champ peut être défini par un underscore</p>
+        <code>
+            String username; // champ public<br/>
+            String _password; // champ privée
+        </code>
+        <p>Comme en Java, il est possible d'utiliser les mots clés <b>static</b> et <b>final</b></p>
+        <h4>Les Constructeurs</h4>
+        <p>Constructeur basique</p>
+        <code>
+            User(this.username, this._password)
+        </code>
+        <p>Ajouter une vérification dans un constructeur grâce à un <b>assert</b></p>
+        <code>
+            User(this.username, this._password) : assert(username.isNotEmpty & _password.isNotEmpty);<br/>
+        </code>
+        <p>Ajouter un traitement sur un paramètre</p>
+        <code>
+            User(String username, this._password) :<br/>
+            &nbsp;&nbsp;assert(username.isNotEmpty & _password.isNotEmpty),<br/>
+            &nbsp;&nbsp;username = username.toLowerCase().trim();<br/>
+        </code>
+        <p>Constructeur nommé</p>
+        <code>
+            User.basic(this.username, this._password);
+        </code>
+        <p>Ajouter une execution avec l'appel du constructeur</p>
+        <code>
+            User(this.username, this._password) {<br/>
+            &nbsp;&nbsp;print("Hello $username!");<br/>
+            }
+        </code>
+        <h4>Getter</h4>
+        <code>
+            String get hello => "Hello $username!";
+        </code>
+        <h4>Setter</h4>
+        <code>
+            set password(String password) {<br/>
+            &nbsp;&nbsp;if (password.isNotEmpty) _password = password;<br/>
+            }
+        </code>
+        <h3>Faire un "Hello world!" en Dart</h3>
+        <p>Créer un fichier <b>hello.dart</b></p>
+        <code>
+            // hello.dart<br/>
+            <br/>
+            import 'dart:html';<br/>
+            <br/>
+            void main() {<br/>
+            &nbsp;&nbsp;querySelector("body")?.innerHtml = "&lt;h1&gt;Hello world!&lt;/h1&gt;";<br/>
+            }
+        </code>
+        <p>Compiler le fichier en JavaScript</p>
+        <code>
+            dart compile js hello.dart -o hello.js
+        </code>
+        <p>Utiliser le fichier JavaScript dans un fichier HTML</p>
+        <code>
+            &lt;script src="hello.js"&gt;&lt;/script&gt;
+        </code>
+        <a target="_blank" href="/pages/dart" class="button">Résultat</a>
     </div>
 </div>

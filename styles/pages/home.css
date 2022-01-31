@@ -90,3 +90,23 @@ div#home div.syntax {
     margin-bottom: 2rem;
     z-index: 1;
 }
+
+div#home div.syntax p,
+div#home div.syntax h4 {
+    width: 90%;
+}
+
+div#home div.syntax code + h3,
+div#home div.syntax p + h3 {
+    margin-top: 2rem;
+}
+
+div#home div.syntax code + h4,
+div#home div.syntax p + h4 {
+    margin-top: 1rem;
+}
+
+div#home div.syntax code + a,
+div#home div.syntax p + a {
+    margin-top: 1rem;
+}

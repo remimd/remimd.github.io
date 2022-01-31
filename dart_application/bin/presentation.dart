@@ -5,7 +5,7 @@ const constant = "Constant";
 
 void main(List<String> arguments) {
   User user = User("user", "password");
-  user.description = "Je suis une description";
+  user.description = "Description";
   String? upperDescription = user.description?.toUpperCase();
 
   User admin = User.admin("admin", "admin");
