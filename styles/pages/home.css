@@ -13,7 +13,11 @@ div#home div.presentation {
     width: 100%;
 }
 
-div#home div.presentation > p {
+div#home div.presentation > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
     width: 750px;
     min-width: 65%;
     max-width: 80%;
@@ -21,6 +25,10 @@ div#home div.presentation > p {
     border-radius: 0 var(--padding-text) var(--padding-text) 0;
     box-shadow: 1rem 1rem 1rem var(--shadow);
     margin-bottom: 2rem;
+}
+
+div#home div.presentation > div > ul {
+    margin-left: calc(var(--padding-text) + 0.25rem);
 }
 
 div#home div.presentation > svg {
@@ -63,4 +71,22 @@ div#home div.advantages > div h3 {
 div#home div.advantages > div ul {
     list-style-type: "\122B3\0020";
     margin-left: var(--padding-text);
+}
+
+div#home div.syntax {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 1000px;
+    min-width: 50%;
+    max-width: calc(90% - 2 * var(--padding-text));
+    padding: var(--padding-text);
+    border: solid var(--secondary-opacity) var(--border);
+    border-radius: var(--padding-text);
+    backdrop-filter: blur(var(--blur));
+    box-shadow: 0 1rem 1rem var(--shadow);
+    margin-bottom: 2rem;
+    z-index: 1;
 }
